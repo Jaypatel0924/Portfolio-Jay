@@ -4,7 +4,6 @@ import { ContainerScroll } from "./ui/container-scroll-animation";
 
 // Assets
 
-import smsv from "../assets/smsv.mp4"
 import sms from "../assets/sms.png"
 import icimg from "../assets/insta.png"
 
@@ -221,7 +220,7 @@ const projects = [
   media: [
     {
       type: "video",
-      src: smsv, // imported video
+      src: "https://youtu.be/1Y5r7QsAA_U", // imported video
       poster: sms, // poster image
       label: "Academic Management & Admin Dashboard Demo",
     },
