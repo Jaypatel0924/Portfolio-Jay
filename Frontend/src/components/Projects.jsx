@@ -3,14 +3,13 @@ import React, { useState, useRef, useEffect } from "react";
 import { ContainerScroll } from "./ui/container-scroll-animation";
 
 // Assets
-import quickchat from "../assets/quickchat.mp4";
-import ic from "../assets/instaClone.mp4"
+
 import smsv from "../assets/smsv.mp4"
 import sms from "../assets/sms.png"
 import icimg from "../assets/insta.png"
 
 import chat from "../assets/chat.png";
-import figmaApp from "../assets/figmaApp.mp4"
+
 import figma from "../assets/figma.png"
 
 
@@ -84,6 +83,33 @@ function Spinner() {
   );
 }
 
+// Helper function to extract YouTube video ID from various YouTube URL formats
+function getYouTubeId(url) {
+  if (!url) return null;
+  
+  // Handle various YouTube URL formats
+  const patterns = [
+    /(?:https?:\/\/)?(?:www\.)?youtu\.be\/([a-zA-Z0-9_-]{11})/, // youtu.be/xxxxx
+    /(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?v=([a-zA-Z0-9_-]{11})/, // youtube.com/watch?v=xxxxx
+    /(?:https?:\/\/)?(?:www\.)?youtube\.com\/embed\/([a-zA-Z0-9_-]{11})/, // youtube.com/embed/xxxxx
+  ];
+  
+  for (let pattern of patterns) {
+    const match = url.match(pattern);
+    if (match && match[1]) {
+      return match[1];
+    }
+  }
+  
+  return null;
+}
+
+// Helper function to check if URL is a YouTube URL
+function isYouTubeUrl(url) {
+  if (!url) return false;
+  return /(?:https?:\/\/)?(?:www\.)?(?:youtu\.be|youtube\.com)/.test(url);
+}
+
 // --- MAIN DATA ---
 
 const projects = [
@@ -112,7 +138,7 @@ const projects = [
     media: [
       {
         type: "video",
-        src: quickchat, // imported video file
+        src: "https://youtu.be/-FyIYMJskgo", // imported video file
         poster: chat, // poster image
         label: "3D Product & Dashboard Demo",
       },
@@ -152,7 +178,7 @@ const projects = [
     media: [
       {
         type: "video",
-        src: ic, // imported video file
+        src: "https://youtu.be/NF5K09LAeBQ", // imported video file
         poster: icimg, // poster image
         label: "Insta Clone App Walkthrough",
       },
@@ -234,7 +260,7 @@ const projects = [
   media: [
     {
       type: "video",
-      src: figmaApp, // imported video
+      src: "https://youtu.be/bd_oTyNtpTM", // imported video
       poster: figma, // poster image
       label: "Design Canvas & Collaboration Demo",
     },
@@ -301,18 +327,36 @@ function ProjectContentInsideTablet({ project }) {
               {/* Spinner: Visible if loading and currently playing/expanded */}
               {isVideoLoading && isExpanded && <Spinner />}
 
-              <video
-                ref={videoRef}
-                src={activeMedia.src}
-                poster={activeMedia.poster}
-                className={`h-full w-full object-cover transition-opacity duration-300 ${isVideoLoading && isExpanded ? 'opacity-50' : 'opacity-100'}`}
-                playsInline
-                // Listeners for loading state
-                onWaiting={() => setIsVideoLoading(true)}
-                onPlaying={() => setIsVideoLoading(false)}
-                onCanPlay={() => setIsVideoLoading(false)}
-                onEnded={() => setIsExpanded(false)} // Auto close on end?
-              />
+              {isYouTubeUrl(activeMedia.src) ? (
+                // YouTube iframe for YouTube URLs
+                <iframe
+                  key={activeMedia.src}
+                  width="100%"
+                  height="100%"
+                  src={`https://www.youtube-nocookie.com/embed/${getYouTubeId(activeMedia.src)}?autoplay=${isExpanded ? 1 : 0}`}
+                  title={activeMedia.label}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="h-full w-full"
+                  loading="lazy"
+                />
+              ) : (
+                // Regular video element for local/direct video files
+                <video
+                  ref={videoRef}
+                  src={activeMedia.src}
+                  poster={activeMedia.poster}
+                  className={`h-full w-full object-cover transition-opacity duration-300 ${isVideoLoading && isExpanded ? 'opacity-50' : 'opacity-100'}`}
+                  controls
+                  playsInline
+                  // Listeners for loading state
+                  onWaiting={() => setIsVideoLoading(true)}
+                  onPlaying={() => setIsVideoLoading(false)}
+                  onCanPlay={() => setIsVideoLoading(false)}
+                  onEnded={() => setIsExpanded(false)}
+                />
+              )}
             </>
           ) : (
             /* --- IMAGE LOGIC --- */
