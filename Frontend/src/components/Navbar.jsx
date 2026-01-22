@@ -11,7 +11,7 @@ import {
 } from "framer-motion";
 import { Download } from "lucide-react";
 import jay from "../assets/JP Image.png"; // Import your logo image
-import cvFile from "../assets/resume2.pdf"; // Import your CV file
+import cvFile from "../assets/Resume2.pdf"; // Import your CV file
 
 const links = [
   { label: "About", href: "#about" },

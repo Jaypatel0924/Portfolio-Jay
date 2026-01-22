@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 import profileImg from "../assets/trophy.png"; // avatar image
-import cvFile from "../assets/resume2.pdf"; // CV/resume file
+import cvFile from "../assets/Resume2.pdf"; // CV/resume file
 
 // OPTIONAL: Add your web3forms access key
 const WEB3FORMS_ACCESS_KEY = ""; 
