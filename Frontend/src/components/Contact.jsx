@@ -77,7 +77,7 @@ const Contact = () => {
 
     const subject = formData.subject?.trim() || `Portfolio message from ${formData.name}`;
     const body = [
-      `Hi Soham,`,
+      `Hi Jay,`,
       ``,
       `You received a message via the portfolio contact form:`,
       ``,
@@ -125,7 +125,7 @@ const Contact = () => {
         window.setTimeout(() => setStatus(null), 5000);
       }
     } else {
-      openGmailCompose({ to: "Sohamdang0@gmail.com", subject, body });
+      openGmailCompose({ to: "jaypatel2324.job@gmail.com", subject, body });
       setIsSubmitting(false);
       setStatus({ type: "success", text: "Compose window opened. Press Send to deliver." });
       setFormData({ name: "", email: "", message: "", hp: "" });

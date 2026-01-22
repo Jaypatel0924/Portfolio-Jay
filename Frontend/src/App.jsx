@@ -12,7 +12,7 @@ export default function App() {
   const siteUrl =
     typeof window !== "undefined" && window.location?.origin
       ? window.location.origin
-      : "https://sohamdang.vercel.app";
+      : "https://jaypatel.dev"; // Update this to your deployed domain
 
   const ogImage = `${siteUrl}/og-main.jpg`; // 1200x630 OG image
   const profileImage = `${siteUrl}/ss3.jpg`;
@@ -73,7 +73,7 @@ export default function App() {
         <meta
           name="keywords"
           content={
-            "Jay Patel, Soham, SD, sohamdang.vercel.app, Full Stack Developer, MERN Developer, React Developer, Node.js, MongoDB, Three.js, 3D portfolio, best portfolio website, portfolio developer, UI/UX, Team Lead, Avani Enterprises, Rohtak, Haryana, SEO portfolio, animated portfolio"
+            "Jay Patel, Full Stack Developer, MERN Developer, React Developer, Node.js, MongoDB, Three.js, 3D portfolio, best portfolio website, portfolio developer, UI/UX, Team Lead, Rohtak, Haryana, SEO portfolio, animated portfolio"
           }
         />
 
