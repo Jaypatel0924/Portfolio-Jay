@@ -175,9 +175,9 @@ const Achievements = () => {
           <li>
             Creator of the <strong>Best 3D Portfolio</strong> website 2025.
           </li>
-          <li>Top Rank holder at MDU Rohtak and CS Olympiad Medalist.</li>
+          <li>Top Rank holder at Ahmedabad and CS.</li>
           <li>
-            Recognized as a top talent in Gurugram and Rohtak, Haryana for React
+            Recognized as a top talent in Gurugram and Ahmedabad, Gujarat for React
             and Node.js development.
           </li>
         </ul>

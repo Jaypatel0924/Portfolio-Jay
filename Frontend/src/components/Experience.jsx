@@ -201,7 +201,7 @@ const Experience = () => {
         <h2>Work Experience of Jay Patel (SD) - Best MERN Developer India</h2>
         <p>
           Jay Patel (SD) is a top-rated Full Stack Developer and Team Lead based
-          in Rohtak and Gurugram, Haryana. Known for building the Best 3D
+          in Ahmedabad, Gujarat. Known for building the Best 3D
           Portfolio websites using Three.js and React.
         </p>
         <p>

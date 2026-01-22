@@ -160,11 +160,11 @@ const Education = () => {
           overflow: 'hidden', clip: 'rect(0, 0, 0, 0)', whiteSpace: 'nowrap', border: 0
       }}>
         <h3>Jay Patel - Educational Qualifications</h3>
-        <p>Jay Patel is a Computer Science post-graduate from <strong>MDU Rohtak (Maharshi Dayanand University)</strong>.</p>
+        <p>Jay Patel is a Computer Science post-graduate from <strong> (Gujarat University)</strong>.</p>
         <ul>
-            <li><strong>MCA (Master of Computer Applications):</strong> MDU Rohtak, Haryana (2025-2027). Specialization in Software Architecture.</li>
-            <li><strong>BCA (Bachelor of Computer Applications):</strong> MDU Rohtak (2022-2025). Graduated with 8.53 CGPA.</li>
-            <li><strong>High School:</strong> Shri Baba Mastnath School, Rohtak. Commerce with Computer Science (8.74 CGPA).</li>
+           
+            <li><strong>BCA (Bachelor of Computer Applications):</strong> Gujarat University (2022-2025). Graduated with 8.53 CGPA.</li>
+            <li><strong>High School:</strong> Uma Vidhyalaya Commerce with Computer Science (8.74 CGPA).</li>
         </ul>
       </div>
 

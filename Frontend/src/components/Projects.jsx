@@ -85,21 +85,21 @@ function Spinner() {
 // Helper function to extract YouTube video ID from various YouTube URL formats
 function getYouTubeId(url) {
   if (!url) return null;
-  
+
   // Handle various YouTube URL formats
   const patterns = [
     /(?:https?:\/\/)?(?:www\.)?youtu\.be\/([a-zA-Z0-9_-]{11})/, // youtu.be/xxxxx
     /(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?v=([a-zA-Z0-9_-]{11})/, // youtube.com/watch?v=xxxxx
     /(?:https?:\/\/)?(?:www\.)?youtube\.com\/embed\/([a-zA-Z0-9_-]{11})/, // youtube.com/embed/xxxxx
   ];
-  
+
   for (let pattern of patterns) {
     const match = url.match(pattern);
     if (match && match[1]) {
       return match[1];
     }
   }
-  
+
   return null;
 }
 
@@ -189,89 +189,89 @@ const projects = [
     ],
   },
 
- {
-  id: "03",
-  year: "2024",
-  title: "Panchjanya Shikshan Sankul",
-  category: "MERN · EdTech",
-  client: "",
-  role: "Full Stack Developer",
-  summary:
-    "Panchjanya Shikshan Sankul is a full-stack MERN-based EdTech platform developed to digitize and streamline academic and administrative operations for an educational institution. The system provides centralized management for students, teachers, courses, and academic records while enabling administrators to monitor performance, attendance, and institutional activities through data-driven dashboards.",
-  highlights: [
-    "Student & Teacher Management with role-based access control.",
-    "Centralized Admin Panel for academic records, admissions, and course management.",
-    "Performance tracking and attendance monitoring with visual analytics.",
-    "Secure authentication and scalable backend architecture.",
-  ],
-  tech: [
-    "React",
-    "Node.js",
-    "Express",
-    "MongoDB",
-    "Redux",
-    "Puppeteer (PDF Gen)",
-    "Razorpay",
-    "Tailwind CSS",
+  {
+    id: "03",
+    year: "2024",
+    title: "Panchjanya Shikshan Sankul",
+    category: "MERN · EdTech",
+    client: "",
+    role: "Full Stack Developer",
+    summary:
+      "Panchjanya Shikshan Sankul is a full-stack MERN-based EdTech platform developed to digitize and streamline academic and administrative operations for an educational institution. The system provides centralized management for students, teachers, courses, and academic records while enabling administrators to monitor performance, attendance, and institutional activities through data-driven dashboards.",
+    highlights: [
+      "Student & Teacher Management with role-based access control.",
+      "Centralized Admin Panel for academic records, admissions, and course management.",
+      "Performance tracking and attendance monitoring with visual analytics.",
+      "Secure authentication and scalable backend architecture.",
+    ],
+    tech: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Redux",
+      "Puppeteer (PDF Gen)",
+      "Razorpay",
+      "Tailwind CSS",
 
-  ],
-  liveUrl: "",
-  repoUrl: "https://github.com/Jaypatel0924/School_Management",
-  media: [
-    {
-      type: "video",
-      src: "https://youtu.be/1Y5r7QsAA_U", // imported video
-      poster: sms, // poster image
-      label: "Academic Management & Admin Dashboard Demo",
-    },
-    {
-      type: "image",
-      src: sms, // imported image
-      label: "Student, Teacher & Course Management View",
-    },
-  ],
-},
+    ],
+    liveUrl: "",
+    repoUrl: "https://github.com/Jaypatel0924/School_Management",
+    media: [
+      {
+        type: "video",
+        src: "https://youtu.be/1Y5r7QsAA_U", // imported video
+        poster: sms, // poster image
+        label: "Academic Management & Admin Dashboard Demo",
+      },
+      {
+        type: "image",
+        src: sms, // imported image
+        label: "Student, Teacher & Course Management View",
+      },
+    ],
+  },
 
- {
-  id: "04",
-  year: "2025",
-  title: "Figma App",
-  category: "MERN · Tech",
-  client: "",
-  role: "Full Stack Developer",
-  summary:
-    "Figma App is a MERN-based collaborative design platform inspired by Figma, enabling users to create, edit, and manage UI designs in a real-time, interactive canvas environment. The application supports drag-and-drop components, live updates, and a scalable backend architecture to handle collaborative workflows efficiently.",
-  highlights: [
-    "Interactive canvas with drag-and-drop elements and real-time updates.",
-    "Component-based design system for creating and managing reusable UI elements.",
-    "Role-based access for designers and viewers with secure authentication.",
-    "Responsive, high-performance UI built for smooth design interactions.",
-  ],
-  tech: [
-    "React",
-    "Node.js",
-    "Express",
-    "MongoDB",
-    "Tailwind CSS",
-  ],
-  liveUrl: "",
-  repoUrl: "https://github.com/Jaypatel0924/Figma-Clone-App",
-  media: [
-    {
-      type: "video",
-      src: "https://youtu.be/bd_oTyNtpTM", // imported video
-      poster: figma, // poster image
-      label: "Design Canvas & Collaboration Demo",
-    },
-    {
-      type: "image",
-      src: figma, // imported image
-      label: "Component Panel & Workspace View",
-    },
-  ],
-}
+  {
+    id: "04",
+    year: "2025",
+    title: "Figma App",
+    category: "MERN · Tech",
+    client: "",
+    role: "Full Stack Developer",
+    summary:
+      "Figma App is a MERN-based collaborative design platform inspired by Figma, enabling users to create, edit, and manage UI designs in a real-time, interactive canvas environment. The application supports drag-and-drop components, live updates, and a scalable backend architecture to handle collaborative workflows efficiently.",
+    highlights: [
+      "Interactive canvas with drag-and-drop elements and real-time updates.",
+      "Component-based design system for creating and managing reusable UI elements.",
+      "Role-based access for designers and viewers with secure authentication.",
+      "Responsive, high-performance UI built for smooth design interactions.",
+    ],
+    tech: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Tailwind CSS",
+    ],
+    liveUrl: "",
+    repoUrl: "https://github.com/Jaypatel0924/Figma-Clone-App",
+    media: [
+      {
+        type: "video",
+        src: "https://youtu.be/bd_oTyNtpTM", // imported video
+        poster: figma, // poster image
+        label: "Design Canvas & Collaboration Demo",
+      },
+      {
+        type: "image",
+        src: figma, // imported image
+        label: "Component Panel & Workspace View",
+      },
+    ],
+  }
 
-  
+
 ];
 
 // --- COMPONENT LOGIC ---
@@ -314,8 +314,8 @@ function ProjectContentInsideTablet({ project }) {
       {/* LEFT SIDE: Media Area (Becomes Full Screen when isExpanded is true) */}
       <div
         className={`relative transition-all duration-500 ease-in-out bg-black ${isExpanded
-            ? "absolute inset-0 z-50 w-full h-full"
-            : "w-full md:w-1/2 h-64 md:h-full border-r border-white/10"
+          ? "absolute inset-0 z-50 w-full h-full"
+          : "w-full md:w-1/2 h-64 md:h-full border-r border-white/10"
           }`}
       >
         <div className="h-full w-full relative group">
@@ -402,8 +402,8 @@ function ProjectContentInsideTablet({ project }) {
                 key={idx}
                 onClick={() => setActiveIndex(idx)}
                 className={`px-2 py-1 text-[9px] font-bold uppercase tracking-wider rounded border backdrop-blur-md transition-colors ${idx === activeIndex
-                    ? "bg-emerald-500/80 border-emerald-500 text-white"
-                    : "bg-black/50 border-white/20 text-zinc-300 hover:bg-black/80"
+                  ? "bg-emerald-500/80 border-emerald-500 text-white"
+                  : "bg-black/50 border-white/20 text-zinc-300 hover:bg-black/80"
                   }`}
               >
                 {m.type === "video" ? "Video" : "Img"}
@@ -502,10 +502,13 @@ const Projects = () => {
         <h3>Jay Patel - Full Stack Projects & Case Studies</h3>
         <p>Explore the best MERN Stack and 3D Web projects developed by Jay Patel (SD).</p>
         <ul>
-          <li><strong>Rohtak Shoe Co:</strong> A premium 3D e-commerce store using React Three Fiber and MERN stack.</li>
-          <li><strong>Avani Enterprises ERP:</strong> A complex HR management portal for payroll, attendance, and analytics.</li>
-          <li><strong>BMU Placement Cell:</strong> An EdTech platform for university recruitment with automated resume building.</li>
-          <li><strong>Apsara Cafe:</strong> A full-stack food ordering app with Razorpay integration and real-time dashboard.</li>
+          <ul>
+            <li><strong>Quick Chat:</strong> A MERN-based real-time chat and 3D experience platform with dashboards and Razorpay integration.</li>
+            <li><strong>Insta Clone App:</strong> A full-stack MERN social media application with authentication, posts, likes, and comments.</li>
+            <li><strong>Panchjanya Shikshan Sankul:</strong> A MERN-based EdTech platform for student, teacher, and academic management.</li>
+            <li><strong>Figma App:</strong> A collaborative MERN design tool with interactive canvas and real-time UI editing.</li>
+          </ul>
+
         </ul>
       </div>
 
